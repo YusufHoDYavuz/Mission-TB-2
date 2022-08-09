@@ -19,7 +19,7 @@ public class CanvasData : MonoBehaviour
 
      void Start()
     {
-        startMass = 150f;
+        startMass = 57f;
         startFuel = 48f;
         StartCoroutine(fuelDown());
     }
@@ -39,8 +39,13 @@ public class CanvasData : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.H))
         {
-            startMass -= 75f;
+            startMass -= 22f;
         }
+        if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.J))
+        {
+            startMass -= 6.5f;
+        }
+
         if (startMass <= 0)
         {
             startMass = 0;
