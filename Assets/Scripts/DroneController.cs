@@ -46,18 +46,22 @@ public class DroneController : MonoBehaviour
         //Rocket Controller
         if (Input.GetKeyDown(KeyCode.F))
         {
+            leftSmallRocket.transform.SetParent(null);
             leftSmallRocket.GetComponent<Rigidbody>().useGravity = true;
         }
         if (Input.GetKeyDown(KeyCode.G))
         {
+            leftBigRocket.transform.SetParent(null);
             leftBigRocket.GetComponent<Rigidbody>().useGravity = true;
         }
         if (Input.GetKeyDown(KeyCode.H))
         {
+            rightBigRocket.transform.SetParent(null);
             rightBigRocket.GetComponent<Rigidbody>().useGravity = true;
         }
         if (Input.GetKeyDown(KeyCode.J))
         {
+            rightSmallRocket.transform.SetParent(null);
             rightSmallRocket.GetComponent<Rigidbody>().useGravity = true;
         }
 

@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 6640523685451058360}
   - component: {fileID: 7258830563529541524}
   - component: {fileID: 5699121031244623948}
+  - component: {fileID: 4371712222856318838}
   m_Layer: 0
   m_Name: apc
   m_TagString: Untagged
@@ -128,8 +129,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5.0441284, y: 10.901362, z: 4.7640543}
-  m_Center: {x: 0.12283325, y: -12.398303, z: 4.611666}
+  m_Size: {x: 5.0441284, y: 10.901361, z: 2.3904333}
+  m_Center: {x: 0.12282762, y: -12.39831, z: 5.7984767}
 --- !u!54 &5699121031244623948
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -146,3 +147,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4371712222856318838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6299464642902136322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9691945a6db08041989bc7db243baec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 100002, guid: 6ecf76dc4f268d340b2666896a954bcc, type: 3}

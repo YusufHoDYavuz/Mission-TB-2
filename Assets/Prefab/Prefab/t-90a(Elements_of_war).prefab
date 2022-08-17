@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1886006276560796919}
   - component: {fileID: 3893917595975145638}
   - component: {fileID: 3107651250723960147}
+  - component: {fileID: 5669224609153878650}
   m_Layer: 0
   m_Name: t-90a(Elements_of_war)
   m_TagString: Untagged
@@ -49,8 +50,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.18027343, y: 0.062922, z: 0.36070913}
-  m_Center: {x: 0.15008056, y: 0.03164687, z: -0.35443172}
+  m_Size: {x: 0.18027343, y: 0.02518421, z: 0.36070913}
+  m_Center: {x: 0.15008056, y: 0.050515763, z: -0.35443172}
 --- !u!54 &3107651250723960147
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -67,6 +68,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5669224609153878650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254147062629426765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9691945a6db08041989bc7db243baec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 100002, guid: 6ecf76dc4f268d340b2666896a954bcc, type: 3}
 --- !u!1 &2725276608302079088
 GameObject:
   m_ObjectHideFlags: 0
