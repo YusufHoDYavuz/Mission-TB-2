@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DroneController : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class DroneController : MonoBehaviour
     public GameObject rocketTrigger;
     public GameObject mainCam;
 
+    public Button leftSmallRocketUI;
+    public Button leftBigRocketUI;
+    public Button RightBigRocketUI;
+    public Button RightSmallRocketUI;
+
     void Update()
     {
         // move forward
@@ -43,40 +49,6 @@ public class DroneController : MonoBehaviour
         // rotating prop
         prop.transform.Rotate(0, 800 * Time.deltaTime, 0);
 
-        //Rocket Controller
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            StartCoroutine("rocketUITrigger");
-            leftSmallRocket.transform.SetParent(null);
-            leftSmallRocket.GetComponent<Rigidbody>().useGravity = true;
-        }
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            StartCoroutine("rocketUITrigger");
-            leftBigRocket.transform.SetParent(null);
-            leftBigRocket.GetComponent<Rigidbody>().useGravity = true;
-        }
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            StartCoroutine("rocketUITrigger");
-            rightBigRocket.transform.SetParent(null);
-            rightBigRocket.GetComponent<Rigidbody>().useGravity = true;
-        }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            StartCoroutine("rocketUITrigger");
-            rightSmallRocket.transform.SetParent(null);
-            rightSmallRocket.GetComponent<Rigidbody>().useGravity = true;
-        }
-
-        //Transition Cam
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            mainCam.active = !mainCam.active;
-            rocketCamUI.active = !rocketCamUI.active;
-            rocketCam.active = !rocketCam.active;
-
-        }
     }
 
     IEnumerator rocketUITrigger()
@@ -84,6 +56,45 @@ public class DroneController : MonoBehaviour
         rocketTrigger.SetActive(true);
         yield return new WaitForSeconds(2);
         rocketTrigger.SetActive(false);
+    }
+
+    public void LeftMamC()
+    {
+        StartCoroutine("rocketUITrigger");
+        leftSmallRocket.transform.SetParent(null);
+        leftSmallRocket.GetComponent<Rigidbody>().useGravity = true;
+        leftSmallRocketUI.interactable = false;
+    }
+    
+    public void LeftMamL()
+    {
+        StartCoroutine("rocketUITrigger");
+        leftBigRocket.transform.SetParent(null);
+        leftBigRocket.GetComponent<Rigidbody>().useGravity = true;
+        leftBigRocketUI.interactable = false;
+    }
+
+    public void RightMamL()
+    {
+        StartCoroutine("rocketUITrigger");
+        rightBigRocket.transform.SetParent(null);
+        rightBigRocket.GetComponent<Rigidbody>().useGravity = true;
+        RightBigRocketUI.interactable = false;
+    }
+    
+    public void RightMamC()
+    {
+        StartCoroutine("rocketUITrigger");
+        rightSmallRocket.transform.SetParent(null);
+        rightSmallRocket.GetComponent<Rigidbody>().useGravity = true;
+        RightSmallRocketUI.interactable = false;
+    }
+
+    public void changeCam()
+    {
+        mainCam.active = !mainCam.active;
+        rocketCamUI.active = !rocketCamUI.active;
+        rocketCam.active = !rocketCam.active;
     }
 
 }

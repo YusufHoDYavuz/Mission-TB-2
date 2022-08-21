@@ -53,9 +53,6 @@ public class CanvasData : MonoBehaviour
         mass.text = "YÜK: " + startMass.ToString() + "KG";
 
         fuel.text = "YKT: " + startFuel.ToString() + "LT";
-
-        
-
     }
 
     IEnumerator fuelDown()

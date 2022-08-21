@@ -10766,7 +10766,7 @@ GameObject:
   - component: {fileID: 317191013}
   - component: {fileID: 317191012}
   m_Layer: 5
-  m_Name: RightMAM-L
+  m_Name: LeftMAM-C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10835,7 +10835,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 317191013}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 919132147682784368}
+        m_TargetAssemblyTypeName: DroneController, Assembly-CSharp
+        m_MethodName: LeftMamC
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &317191013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10856,7 +10868,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 779cc5b71928e29408fc6ce97597b472, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b53c0e941ac75a444a11f0c6a55369cc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -27479,7 +27491,7 @@ GameObject:
   - component: {fileID: 766029571}
   - component: {fileID: 766029570}
   m_Layer: 5
-  m_Name: LeftMAM-L
+  m_Name: RightMAM-L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27548,7 +27560,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 766029571}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 919132147682784368}
+        m_TargetAssemblyTypeName: DroneController, Assembly-CSharp
+        m_MethodName: RightMamL
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &766029571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27569,7 +27593,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2492e9b6308a7214aaa3c5d40b927a4a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 779cc5b71928e29408fc6ce97597b472, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -29143,7 +29167,7 @@ GameObject:
   - component: {fileID: 806603162}
   - component: {fileID: 806603161}
   m_Layer: 5
-  m_Name: LeftMAM-C
+  m_Name: RightMAM-C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29212,7 +29236,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 806603162}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 919132147682784368}
+        m_TargetAssemblyTypeName: DroneController, Assembly-CSharp
+        m_MethodName: RightMamC
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &806603162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29233,7 +29269,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b53c0e941ac75a444a11f0c6a55369cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0727231b88ce62746b3fd9b97710e3eb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -32932,6 +32968,86 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6075155838382831309, guid: 273b8f4150121d249ac7e2fd11da7005, type: 3}
   m_PrefabInstance: {fileID: 909214253}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &909998892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 909998893}
+  - component: {fileID: 909998895}
+  - component: {fileID: 909998894}
+  m_Layer: 5
+  m_Name: Text (Legacy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &909998893
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909998892}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2043913342}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &909998894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909998892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: CHANGE CAM
+--- !u!222 &909998895
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909998892}
+  m_CullTransparentMesh: 1
 --- !u!1001 &911629320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40066,6 +40182,7 @@ RectTransform:
   m_Children:
   - {fileID: 1755803437}
   - {fileID: 1781140623}
+  - {fileID: 2043913342}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -55746,7 +55863,7 @@ GameObject:
   - component: {fileID: 1573521381}
   - component: {fileID: 1573521380}
   m_Layer: 5
-  m_Name: RightMAM-C
+  m_Name: LeftMAM-L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55815,7 +55932,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1573521381}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 919132147682784368}
+        m_TargetAssemblyTypeName: DroneController, Assembly-CSharp
+        m_MethodName: LeftMamL
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1573521381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55836,7 +55965,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0727231b88ce62746b3fd9b97710e3eb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2492e9b6308a7214aaa3c5d40b927a4a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -62822,7 +62951,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1781140623
 RectTransform:
   m_ObjectHideFlags: 0
@@ -71968,6 +72097,140 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8890356699427785745, guid: d5b8de414112a004a82d0437b5f7a780, type: 3}
   m_PrefabInstance: {fileID: 2042141836}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2043913341
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2043913342}
+  - component: {fileID: 2043913345}
+  - component: {fileID: 2043913344}
+  - component: {fileID: 2043913343}
+  m_Layer: 5
+  m_Name: ChangeCam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2043913342
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043913341}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 909998893}
+  m_Father: {fileID: 1116745007}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 739, y: -395}
+  m_SizeDelta: {x: 300, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2043913343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043913341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2043913344}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 919132147682784368}
+        m_TargetAssemblyTypeName: DroneController, Assembly-CSharp
+        m_MethodName: changeCam
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2043913344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043913341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2043913345
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043913341}
+  m_CullTransparentMesh: 1
 --- !u!1001 &2046140360
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75918,6 +76181,22 @@ PrefabInstance:
       propertyPath: rocketTrigger
       value: 
       objectReference: {fileID: 787486798}
+    - target: {fileID: 735611828224450741, guid: 1c57912a967e91440913367a513bd658, type: 3}
+      propertyPath: leftBigRocketUI
+      value: 
+      objectReference: {fileID: 1573521380}
+    - target: {fileID: 735611828224450741, guid: 1c57912a967e91440913367a513bd658, type: 3}
+      propertyPath: RightBigRocketUI
+      value: 
+      objectReference: {fileID: 766029570}
+    - target: {fileID: 735611828224450741, guid: 1c57912a967e91440913367a513bd658, type: 3}
+      propertyPath: leftSmallRocketUI
+      value: 
+      objectReference: {fileID: 317191012}
+    - target: {fileID: 735611828224450741, guid: 1c57912a967e91440913367a513bd658, type: 3}
+      propertyPath: RightSmallRocketUI
+      value: 
+      objectReference: {fileID: 806603161}
     - target: {fileID: 990741830370428764, guid: 1c57912a967e91440913367a513bd658, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -75986,6 +76265,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 501028613566094822, guid: 1c57912a967e91440913367a513bd658, type: 3}
   m_PrefabInstance: {fileID: 735611826744584587}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &919132147682784368 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 735611828224450741, guid: 1c57912a967e91440913367a513bd658, type: 3}
+  m_PrefabInstance: {fileID: 735611826744584587}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147682784365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d6c92083df2caf478717507da051d28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &919132147704000390 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9020957875431267463, guid: a17eb56e7adad68429f6d5de110b6856, type: 3}
