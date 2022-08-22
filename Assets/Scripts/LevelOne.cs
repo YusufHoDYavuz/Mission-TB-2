@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +10,4 @@ public class LevelOne : MonoBehaviour
     {
         Destroy(infoUI,9);
     }
-
-   
 }
