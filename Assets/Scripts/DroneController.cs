@@ -29,6 +29,11 @@ public class DroneController : MonoBehaviour
     public Button RightBigRocketUI;
     public Button RightSmallRocketUI;
 
+    void Start()
+    {
+        Invoke("camAnimNon", 12);
+    }
+
     void Update()
     {
         // move forward
@@ -64,6 +69,7 @@ public class DroneController : MonoBehaviour
         leftSmallRocket.transform.SetParent(null);
         leftSmallRocket.GetComponent<Rigidbody>().useGravity = true;
         leftSmallRocketUI.interactable = false;
+        Destroy(leftSmallRocket, 10);
     }
     
     public void LeftMamL()
@@ -72,6 +78,7 @@ public class DroneController : MonoBehaviour
         leftBigRocket.transform.SetParent(null);
         leftBigRocket.GetComponent<Rigidbody>().useGravity = true;
         leftBigRocketUI.interactable = false;
+        Destroy(leftBigRocket, 10);
     }
 
     public void RightMamL()
@@ -80,6 +87,7 @@ public class DroneController : MonoBehaviour
         rightBigRocket.transform.SetParent(null);
         rightBigRocket.GetComponent<Rigidbody>().useGravity = true;
         RightBigRocketUI.interactable = false;
+        Destroy(rightBigRocket, 10);
     }
     
     public void RightMamC()
@@ -88,6 +96,7 @@ public class DroneController : MonoBehaviour
         rightSmallRocket.transform.SetParent(null);
         rightSmallRocket.GetComponent<Rigidbody>().useGravity = true;
         RightSmallRocketUI.interactable = false;
+        Destroy(rightSmallRocket, 10);
     }
 
     public void changeCam()
@@ -95,6 +104,11 @@ public class DroneController : MonoBehaviour
         mainCam.active = !mainCam.active;
         rocketCamUI.active = !rocketCamUI.active;
         rocketCam.active = !rocketCam.active;
+    }
+
+    void camAnimNon()
+    {
+        mainCam.GetComponent<Animator>().enabled = false;
     }
 
 }
