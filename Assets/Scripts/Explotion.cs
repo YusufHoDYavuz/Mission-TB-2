@@ -10,6 +10,7 @@ public class Explotion : MonoBehaviour
     public Text completeText;
     public GameObject rocketUI;
     public GameObject homeUI;
+    public GameObject pauseBtn;
 
     void OnCollisionEnter()
     {
@@ -19,6 +20,7 @@ public class Explotion : MonoBehaviour
         Debug.Log("hedef başarıyla vuruldu");
         rocketUI.SetActive(false);
         homeUI.SetActive(false);
+        pauseBtn.SetActive(false);
         completeText.text = "Görev Başarılı";
         Invoke("pauseGame", 2);
     }

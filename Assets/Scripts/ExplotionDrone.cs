@@ -15,6 +15,7 @@ public class ExplotionDrone : MonoBehaviour
 
     void OnCollisionEnter()
     {
+        nextLevelUI.interactable = false;
         mainCam.transform.SetParent(null);
         mainCam.SetActive(true);
         GameObject expl = Instantiate(explosion, transform.position, Quaternion.identity);
@@ -25,6 +26,5 @@ public class ExplotionDrone : MonoBehaviour
         failedUI.SetActive(true);
         failedText.text = "Siha ile irtibat kesildi";
         homeUI.SetActive(false);
-        nextLevelUI.interactable = false;
     }
 }

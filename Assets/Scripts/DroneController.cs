@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,6 +23,11 @@ public class DroneController : MonoBehaviour
     public GameObject rocketCamUI;
     public GameObject rocketTrigger;
     public GameObject mainCam;
+    public GameObject homeUI;
+    public GameObject pauseCanvas;
+    public GameObject pauseNext;
+    public Text pauseText;
+    public GameObject nonePause;
 
     public Button leftSmallRocketUI;
     public Button leftBigRocketUI;
@@ -99,16 +104,44 @@ public class DroneController : MonoBehaviour
         Destroy(rightSmallRocket, 10);
     }
 
-    public void changeCam()
+    public void goToRocketCam()
     {
         mainCam.active = !mainCam.active;
         rocketCamUI.active = !rocketCamUI.active;
         rocketCam.active = !rocketCam.active;
+        homeUI.SetActive(false);
+        rocketCamUI.SetActive(true);
+    }
+    
+    public void goToHomeCam()
+    {
+        mainCam.active = !mainCam.active;
+        rocketCamUI.active = !rocketCamUI.active;
+        rocketCam.active = !rocketCam.active;
+        rocketCamUI.SetActive(false);
+        homeUI.SetActive(true);
     }
 
     void camAnimNon()
     {
         mainCam.GetComponent<Animator>().enabled = false;
+    }
+
+    public void pauseGame()
+    {
+        Time.timeScale = 0f;
+        pauseCanvas.SetActive(true);
+        pauseNext.SetActive(false);
+        nonePause.SetActive(true);
+        pauseText.text = "Oyun Duraklatıldı";
+    }
+    
+    public void NonePauseGame()
+    {
+        Time.timeScale = 1f;
+        pauseCanvas.SetActive(false);
+        nonePause.SetActive(false);
+        pauseNext.SetActive(true);
     }
 
 }

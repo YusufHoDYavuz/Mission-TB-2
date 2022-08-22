@@ -25,4 +25,6 @@ public class StartMenu : MonoBehaviour
         Application.Quit();
         Debug.Log("oyundan çıkış yapıldı");
     }
+
+   
 }
