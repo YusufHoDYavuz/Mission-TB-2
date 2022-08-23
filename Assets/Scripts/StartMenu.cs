@@ -26,6 +26,11 @@ public class StartMenu : MonoBehaviour
         Debug.Log("ayaralara girildi");
     }
 
+    public void specialMode()
+    {
+        Debug.Log("special mode girildi");
+    }
+
     public void quitGame()
     {
         Application.Quit();
