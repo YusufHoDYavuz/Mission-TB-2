@@ -61,9 +61,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d6c92083df2caf478717507da051d28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flySpeed: 10
-  turnSpeed: 0.35
-  YawSpeed: 40
   prop: {fileID: 6699000428868867140}
   leftSmallRocket: {fileID: 501028615120627396}
   leftBigRocket: {fileID: 501028613864528059}
@@ -74,6 +71,16 @@ MonoBehaviour:
   rocketCamUI: {fileID: 0}
   rocketTrigger: {fileID: 0}
   mainCam: {fileID: 735611826863523066}
+  homeUI: {fileID: 0}
+  pauseCanvas: {fileID: 0}
+  pauseNext: {fileID: 0}
+  pauseText: {fileID: 0}
+  nonePause: {fileID: 0}
+  leftSmallRocketUI: {fileID: 0}
+  leftBigRocketUI: {fileID: 0}
+  RightBigRocketUI: {fileID: 0}
+  RightSmallRocketUI: {fileID: 0}
+  droneSpeed: 10
 --- !u!54 &501028613566094820
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -105,6 +112,10 @@ MonoBehaviour:
   explosion: {fileID: 100006, guid: 7c442b9b6852b8a4f93306f3d154d471, type: 3}
   mainCam: {fileID: 735611826863523066}
   myCanvas: {fileID: 0}
+  failedUI: {fileID: 0}
+  failedText: {fileID: 0}
+  homeUI: {fileID: 0}
+  nextLevelUI: {fileID: 0}
 --- !u!1 &735611826316889216
 GameObject:
   m_ObjectHideFlags: 0

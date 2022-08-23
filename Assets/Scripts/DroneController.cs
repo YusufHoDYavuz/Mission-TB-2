@@ -5,13 +5,6 @@ using UnityEngine.UI;
 
 public class DroneController : MonoBehaviour
 {
-    public float flySpeed = 5f;
-
-    public float turnSpeed = 1f;
-
-    public float YawSpeed = 120;
-    float Yaw;
-
     public GameObject prop;
 
     public GameObject leftSmallRocket;
@@ -34,6 +27,8 @@ public class DroneController : MonoBehaviour
     public Button RightBigRocketUI;
     public Button RightSmallRocketUI;
 
+    public float droneSpeed = 10f;
+
     void Start()
     {
         Invoke("camAnimNon", 12);
@@ -41,20 +36,17 @@ public class DroneController : MonoBehaviour
 
     void Update()
     {
-        // move forward
-        transform.position += transform.forward * Time.deltaTime * flySpeed;
+        // move
+        transform.position += transform.forward * droneSpeed * Time.deltaTime;
 
-        // inputs
-        float horizontalInput = Input.GetAxis("Horizontal") * turnSpeed;
-        float verticalInput = Input.GetAxis("Vertical") * turnSpeed;
-
-        // YAW (turn left-right) , pitch (up-down), roll (rotate left-right)
-        Yaw += horizontalInput * YawSpeed * Time.deltaTime;
-        float pitch = Mathf.Lerp(0, 40, Mathf.Abs(verticalInput)) * Mathf.Sign(verticalInput);
-        float roll = Mathf.Lerp(0, 70, Mathf.Abs(horizontalInput)) * -Mathf.Sign(horizontalInput);
-
-        //apply rotation
-        transform.localRotation = Quaternion.Euler(Vector3.up * Yaw + Vector3.right * pitch + Vector3.forward * roll);
+        if (Input.GetKey(KeyCode.W))
+            transform.Rotate(0.5f, 0, 0);
+        if (Input.GetKey(KeyCode.S))
+            transform.Rotate(-0.5f, 0, 0);
+        if (Input.GetKey(KeyCode.D))
+            transform.Rotate(0, 0.5f, -1.3f);
+        if (Input.GetKey(KeyCode.A))
+            transform.Rotate(0, -0.5f, 1.3f);
 
         // rotating prop
         prop.transform.Rotate(0, 800 * Time.deltaTime, 0);

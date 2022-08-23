@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class StartMenu : MonoBehaviour
 {
+    public GameObject prop;
+
+    void Update()
+    {
+        prop.transform.Rotate(0, 200 * Time.deltaTime, 0);
+    }
 
     public void startGame()
     {
