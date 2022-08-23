@@ -29,9 +29,13 @@ public class DroneController : MonoBehaviour
 
     public float droneSpeed = 10f;
 
+    float goingUpDown, rotateRightLeft;
+
     void Start()
     {
         Invoke("camAnimNon", 12);
+        goingUpDown = 0f;
+        rotateRightLeft = 0f;
     }
 
     void Update()
@@ -39,18 +43,34 @@ public class DroneController : MonoBehaviour
         // move
         transform.position += transform.forward * droneSpeed * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || goingUpDown < 0f){
             transform.Rotate(0.5f, 0, 0);
-        if (Input.GetKey(KeyCode.S))
+        }
+        if (Input.GetKey(KeyCode.S) || goingUpDown > 0f){
             transform.Rotate(-0.5f, 0, 0);
-        if (Input.GetKey(KeyCode.D))
+        }
+        if (Input.GetKey(KeyCode.D) || rotateRightLeft < 0f)
+        {
             transform.Rotate(0, 0.5f, -1.3f);
-        if (Input.GetKey(KeyCode.A))
+        }
+        if (Input.GetKey(KeyCode.A) || rotateRightLeft > 0f)
+        {
             transform.Rotate(0, -0.5f, 1.3f);
+        }
 
         // rotating prop
         prop.transform.Rotate(0, 800 * Time.deltaTime, 0);
 
+    }
+
+    public void GoUpDown(float v)
+    {
+        goingUpDown = v;
+    }
+
+    public void RotateRightLeft(float v)
+    {
+        rotateRightLeft = v;
     }
 
     IEnumerator rocketUITrigger()
