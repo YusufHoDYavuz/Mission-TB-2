@@ -27,6 +27,14 @@ public class DroneController : MonoBehaviour
     public Button RightBigRocketUI;
     public Button RightSmallRocketUI;
 
+    public Button upMove;
+    public Button downMove;
+    public Button leftMove;
+    public Button rightMove;
+
+    public GameObject camUI;
+    public GameObject changeCam;
+
     public float droneSpeed = 10f;
 
     float goingUpDown, rotateRightLeft;
@@ -34,6 +42,7 @@ public class DroneController : MonoBehaviour
     void Start()
     {
         Invoke("camAnimNon", 12);
+        Invoke("animsRemove", 13.2f);
         goingUpDown = 0f;
         rotateRightLeft = 0f;
     }
@@ -137,6 +146,17 @@ public class DroneController : MonoBehaviour
     void camAnimNon()
     {
         mainCam.GetComponent<Animator>().enabled = false;
+        homeUI.SetActive(true);
+    }
+
+    void animsRemove()
+    {
+        camUI.GetComponent<Animator>().enabled = false;
+        upMove.GetComponent<Animator>().enabled = false;
+        downMove.GetComponent<Animator>().enabled = false;
+        leftMove.GetComponent<Animator>().enabled = false;
+        rightMove.GetComponent<Animator>().enabled = false;
+        changeCam.GetComponent<Animator>().enabled = false;
     }
 
     public void pauseGame()
