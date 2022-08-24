@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class StartMenu : MonoBehaviour
 
     public void startGame()
     {
-        Debug.Log("oyun başladı");
+        SceneManager.LoadScene(1);
     }
 
     public void levelMenu()
@@ -28,13 +29,12 @@ public class StartMenu : MonoBehaviour
 
     public void specialMode()
     {
-        Debug.Log("special mode girildi");
+        SceneManager.LoadScene(6);
     }
 
     public void quitGame()
     {
         Application.Quit();
-        Debug.Log("oyundan çıkış yapıldı");
     }
 
    

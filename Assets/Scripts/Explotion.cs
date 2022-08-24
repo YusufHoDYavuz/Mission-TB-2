@@ -21,7 +21,7 @@ public class Explotion : MonoBehaviour
         rocketUI.SetActive(false);
         homeUI.SetActive(false);
         pauseBtn.SetActive(false);
-        completeText.text = "Görev Başarıyla Tamamlandı!";
+        completeText.text = "Görev Başarılı!";
         Invoke("pauseGame", 2);
     }
 
