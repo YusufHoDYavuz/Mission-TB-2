@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class StartMenu : MonoBehaviour
 {
     public GameObject prop;
+    public GameObject levelMenuUI;
+    public GameObject settingMenuUI;
+
+    public GameObject playBtnOn;
 
     void Update()
     {
@@ -14,22 +18,33 @@ public class StartMenu : MonoBehaviour
 
     public void startGame()
     {
-        SceneManager.LoadScene(1);
+        StartCoroutine(playGame());
     }
 
     public void levelMenu()
     {
-        Debug.Log("level menüye girildi");
+        levelMenuUI.SetActive(true);
+        
+    }
+
+    public void homeMenuFromLevelMenu()
+    {
+        levelMenuUI.SetActive(false);
     }
 
     public void settingsMenu()
     {
-        Debug.Log("ayaralara girildi");
+        settingMenuUI.SetActive(true);
+    }
+    
+    public void fromSettingsMenu()
+    {
+        settingMenuUI.SetActive(false);
     }
 
     public void specialMode()
     {
-        SceneManager.LoadScene(6);
+        StartCoroutine(playSpecialMode());
     }
 
     public void quitGame()
@@ -37,5 +52,19 @@ public class StartMenu : MonoBehaviour
         Application.Quit();
     }
 
-   
+    IEnumerator playGame()
+    {
+        playBtnOn.SetActive(true);
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(1);
+    }
+    
+    IEnumerator playSpecialMode()
+    {
+        playBtnOn.SetActive(true);
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(6);
+    }
+
+
 }
