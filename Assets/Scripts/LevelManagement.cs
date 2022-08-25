@@ -4,28 +4,28 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class LevelManagment : MonoBehaviour
+public class LevelManagement : MonoBehaviour
 {
-    int levelIsUnlocked;
     public Button[] buttons;
 
     void Start()
     {
-        levelIsUnlocked = PlayerPrefs.GetInt("levelIsUnlocked", 1);
+        int levelsUnlocked = PlayerPrefs.GetInt("levelsUnlocked", 1);
 
         for (int i = 0; i < buttons.Length; i++)
         {
             buttons[i].interactable = false;
         }
 
-        for (int i = 0; i < levelIsUnlocked; i++)
+        for (int i = 0; i < levelsUnlocked; i++)
         {
             buttons[i].interactable = true;
         }
     }
 
-    public void LoadLevel(int levelIndex)
+    public void LoadScene(int levelIndex)
     {
         SceneManager.LoadScene(levelIndex);
     }
+
 }

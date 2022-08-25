@@ -21,7 +21,6 @@ public class ExplotionDrone : MonoBehaviour
         GameObject expl = Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
         Destroy(expl, 7);
-        Debug.Log("drone kamikaze oldu!");
         Destroy(myCanvas);
         failedUI.SetActive(true);
         failedText.text = "Siha ile irtibat kesildi";

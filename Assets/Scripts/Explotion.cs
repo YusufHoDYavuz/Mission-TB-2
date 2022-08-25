@@ -17,7 +17,6 @@ public class Explotion : MonoBehaviour
         GameObject expl = Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject,3);
         Destroy(expl, 7);
-        Debug.Log("hedef başarıyla vuruldu");
         rocketUI.SetActive(false);
         homeUI.SetActive(false);
         pauseBtn.SetActive(false);
