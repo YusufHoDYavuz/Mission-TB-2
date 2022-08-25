@@ -37,15 +37,6 @@ public class CanvasData : MonoBehaviour
         droneRot = Mathf.Round(droneRot * 100f);
         rpm.text = "RPM: " + droneRot.ToString() + "00";
 
-        if (Input.GetKeyDown(KeyCode.G) || Input.GetKeyDown(KeyCode.H))
-        {
-            startMass -= 22f;
-        }
-        if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.J))
-        {
-            startMass -= 6.5f;
-        }
-
         if (startMass <= 0)
         {
             startMass = 0;
@@ -67,8 +58,14 @@ public class CanvasData : MonoBehaviour
         }
     }
 
-
-
-
-
+    public void BigRocketDown()
+    {
+        startMass -= 22f;
+    }
+    
+    public void SmallRocketDown()
+    {
+        startMass -= 6.5f;
+    }
+    
 }
