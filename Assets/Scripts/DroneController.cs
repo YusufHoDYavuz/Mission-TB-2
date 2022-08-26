@@ -39,6 +39,12 @@ public class DroneController : MonoBehaviour
 
     float goingUpDown, rotateRightLeft;
 
+    void Awake()
+    {
+        Time.timeScale = 1;
+
+    }
+
     void Start()
     {
         Invoke("camAnimNon", 12);
