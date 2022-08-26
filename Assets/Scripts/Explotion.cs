@@ -12,8 +12,16 @@ public class Explotion : MonoBehaviour
     public GameObject homeUI;
     public GameObject pauseBtn;
 
+    AudioSource explosionSound;
+
+    private void Start()
+    {
+        explosionSound = gameObject.GetComponent<AudioSource>();
+    }
+
     void OnCollisionEnter()
     {
+        explosionSound.Play();
         GameObject expl = Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject,3);
         Destroy(expl, 7);
